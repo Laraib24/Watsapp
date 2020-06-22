@@ -135,3 +135,20 @@ body
     color: #525252e5;
     font-size: 35px;
 }
+.left-side .left-text-2 h3 
+{
+    color: #888989;
+    font-weight: lighter;
+    font-size: 15px;
+    word-spacing: 0.0001;
+    line-height: 20px;
+}
+.left-side .left-text-2
+{
+
+    padding-bottom: 15px;
+    margin-left: 250px;
+    margin-right: 250px;
+    border-bottom: 1px solid #e5e5e6;
+
+}
