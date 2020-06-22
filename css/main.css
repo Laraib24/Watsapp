@@ -145,10 +145,26 @@ body
 }
 .left-side .left-text-2
 {
-
     padding-bottom: 15px;
     margin-left: 250px;
     margin-right: 250px;
     border-bottom: 1px solid #e5e5e6;
+}
+.body-footer p
+{
+    padding-top: 30px;
+    color: #919191;
+    font-size: 15px;
+
+}
+.body-footer i 
+{
+    padding: 4px;
+    font-size: 14px;
+}
+.body-footer a 
+{
+    color: #07bc4c;
+    text-decoration: none;
 
 }
