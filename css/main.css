@@ -121,9 +121,7 @@ body
     align-items: center;
     margin-bottom: 0;
     border-bottom: 6px solid #4adf83;
-    display: block;
-
-    
+    display: block;  
 }
 
 .leftimg img 
@@ -217,3 +215,4 @@ body
     margin-left: -585px;
     margin-top: -10px;
 }
+
