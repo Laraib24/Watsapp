@@ -173,9 +173,8 @@ body
 .threads
 {
     padding-top: 1px;
-    z-index: 1;
 }
-.thread-img1 img
+.right-side .thread-img1 img
 {
     width: 11%;
     border-radius: 50%;
@@ -187,7 +186,7 @@ body
     outline: none;
 
 }
-.thread1 button, .thread2 button, .thread3 button, .thread4 button, .thread5 button, .thread6 button 
+.right-side .thread1 button, .thread2 button, .thread3 button, .thread4 button, .thread5 button, .thread6 button 
 {
     max-width: 94%;
     margin-left: 3%;
@@ -215,4 +214,101 @@ body
     margin-left: -585px;
     margin-top: -10px;
 }
+.left-side .left-header
+{
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+}
+.left-side .left-header .thread1 button
+{
+    width: 100%;
+    margin-top: 10px;
+    height: 55px;
+    border: transparent;
+    border-style: solid;
+    border-width: 0px;
+    border-color: transparent;
+    outline: none;
+    background-color: #ededed;
+}
+.left-side .left-header .left-menu
+{
+    background-color: #ededed;
+}
+.left-side .left-header .left-menu ul 
+{
+    height: 33px;
+    margin-right: 20px;
+    display: flex;
+    list-style-type: none;
+}
+.left-side .left-header .left-menu ul li 
+{
+    padding: 15px;
+    text-decoration: none;
+    color: #919191;
+}
+.left-side .left-header .thread1 button .title1 h3
+{
+    margin-top: -25px;
+    margin-right: 45px;
+}
+.left-side .left-header .thread1 button .title1 p
+{
+    margin-top: -17px;
+    margin-right: 45px;
+}
 
+.left-side .left-header .thread1 button .thread-img1 img
+{
+    position: relative;
+    left: -360px;
+    top: 7px;
+    width: 4%;
+    border-radius: 50%;
+    border: transparent;
+    box-shadow: 3px 3px 3px #807c7cbd;
+    border-style: solid;
+    border-width: 0px;
+    border-color: transparent;
+    outline: none;
+    padding: 1px;
+}
+
+
+.Type-message
+{
+    height: 60px;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    position: fixed;
+    background-color: #f0f0f0;
+    margin-top: 542px;
+    margin-bottom: 0;
+    
+}
+.Type-message i
+{
+    padding-top: 0.3em;
+    padding-right: 0.3em;
+    color: #919191;
+    font-size: 25px;
+    justify-content: space-between;
+}
+
+.Type-message input 
+{
+    width: 60%;
+    margin-left: 0%;
+    margin-right: 30%;
+    margin-top: 10px;
+    border-radius: 40px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0px;
+    border-color: transparent;
+    outline: none;
+    text-align: start;
+}
