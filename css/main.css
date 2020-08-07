@@ -312,3 +312,7 @@ body
     outline: none;
     text-align: start;
 }
+.left-side myDiv 
+{
+    background-color: lawngreen;
+}
