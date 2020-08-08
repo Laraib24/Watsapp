@@ -220,6 +220,10 @@ body
     max-width: 100%;
     justify-content: space-between;
 }
+.left-side .view1
+{
+    margin-top: -585px;
+}
 .left-side .left-header .thread1 button
 {
     width: 100%;
@@ -312,7 +316,4 @@ body
     outline: none;
     text-align: start;
 }
-.left-side myDiv 
-{
-    background-color: lawngreen;
-}
+
