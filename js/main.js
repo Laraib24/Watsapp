@@ -1,56 +1,72 @@
+const threads = document.getElementById("threads");
 
-function firstThread() {
-  document.getElementById("lefSide").style.visibility = "hidden";
-  document.getElementById("inScreen").style.visibility = "hidden";
-  document.getElementById("threadOne").style.visibility = "visible";
-  document.getElementById("threadTwo").style.visibility = "hidden";
-  document.getElementById("threadThree").style.visibility = "hidden";
-  document.getElementById("threadFour").style.visibility = "hidden";
-  document.getElementById("threadFifth").style.visibility = "hidden";
-  document.getElementById("threadSix").style.visibility = "hidden";
-  };
-function secondThread() {
-    document.getElementById("inScreen").style.visibility = "hidden";
-    document.getElementById("threadOne").style.visibility = "hidden";
-    document.getElementById("threadTwo").style.visibility = "visible";
-    document.getElementById("threadThree").style.visibility = "hidden";
-    document.getElementById("threadFour").style.visibility = "hidden";
-    document.getElementById("threadFifth").style.visibility = "hidden";
-    document.getElementById("threadSix").style.visibility = "hidden";
-    };
-function thirdThread() {
-      document.getElementById("inScreen").style.visibility = "hidden";
-      document.getElementById("threadOne").style.visibility = "hidden";
-      document.getElementById("threadTwo").style.visibility = "hidden";
-      document.getElementById("threadThree").style.visibility = "visible";
-      document.getElementById("threadFour").style.visibility = "hidden";
-      document.getElementById("threadFifth").style.visibility = "hidden";
-      document.getElementById("threadSix").style.visibility = "hidden";
-      };
-function fourThread() {
-        document.getElementById("inScreen").style.visibility = "hidden";
-        document.getElementById("threadOne").style.visibility = "hidden";
-        document.getElementById("threadTwo").style.visibility = "hidden";
-        document.getElementById("threadThree").style.visibility = "hidden";
-        document.getElementById("threadFour").style.visibility = "visible";
-        document.getElementById("threadFifth").style.visibility = "hidden";
-        document.getElementById("threadSix").style.visibility = "hidden";
-        };
-function fifthThread() {
-          document.getElementById("inScreen").style.visibility = "hidden";
-          document.getElementById("threadOne").style.visibility = "hidden";
-          document.getElementById("threadTwo").style.visibility = "hidden";
-          document.getElementById("threadThree").style.visibility = "hidden";
-          document.getElementById("threadFour").style.visibility = "hidden";
-          document.getElementById("threadFifth").style.visibility = "visible";
-          document.getElementById("threadSix").style.visibility = "hidden";
-          };
-function sixThread() {
-            document.getElementById("inScreen").style.visibility = "hidden";
-            document.getElementById("threadOne").style.visibility = "hidden";
-            document.getElementById("threadTwo").style.visibility = "hidden";
-            document.getElementById("threadThree").style.visibility = "hidden";
-            document.getElementById("threadFour").style.visibility = "hidden";
-            document.getElementById("threadFifth").style.visibility = "hidden";
-            document.getElementById("threadSix").style.visibility = "visible";
-            };
+for (let chat of CHAT_DATA) {
+  const html =
+    `
+  <div class="thread1" id="${chat.id}" onClick="openChat(this.id)">
+  <button>
+    <div class="thread-img1">
+      <img src="images/blankprofile.png" alt="">
+    </div>
+    <div class="title1"> <h3>${chat.id}</h3>
+      <p>${chat.recent}</p>
+    </div>
+  </button>
+  </div>
+  `
+  threads.innerHTML += html
+
+}
+
+// function openChat(id) {
+
+// }
+
+const openChat = (id) => {
+
+  const historyDiv = document.getElementById("chat_history")
+  historyDiv.innerHTML = ""
+
+  const chat = CHAT_DATA.find(e => e.id === id)
+  const placeholder = document.getElementById("inScreen");
+  placeholder.style.visibility = "hidden";
+  const messagesDiv = document.getElementById("threadOne");
+  messagesDiv.style.visibility = "inherit";
+
+  const chat_title = document.getElementById("chat_title")
+  chat_title.innerHTML = `<h3>${chat.id}</h3>`
+
+
+  
+
+  for (let message of chat.messages) {
+    let html = ""
+
+    if (message.from === "you") {
+      html =
+        `
+    <div class="outgoing_msg">
+      <div class="sent_msg">
+        <p>${message.message}</p>
+        <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+    </div>
+    `
+    } else {
+      html =
+        `
+    <div class="incoming_msg">
+      <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+        <div class="received_msg">
+          <div class="received_withd_msg">
+            <p>${message.message}</p>
+            <span class="time_date"> 11:01 AM    |    June 9</span></div>
+          </div>
+    </div>
+    `
+    }
+
+    historyDiv.innerHTML += html
+
+  }
+
+}
