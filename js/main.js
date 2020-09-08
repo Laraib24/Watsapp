@@ -1,20 +1,5 @@
 const threads = document.getElementById("threads");
 
-<<<<<<< HEAD
-const colors = ["green","red","rgba(133,122,200)","#f15025"];
-const btn = document.getElementById("btn");
-const color = document.querySelector(".colors");
-
-btn.addEventListener("click", function () {
-  const randomNumber = getRandomNumber();
-  console.log(randomNumber);
-
-  document.body.style.backgroundColor = colors[randomNumber];
-});
-function getRandomNumber(){
-  return Math.floor(Math.random()* colors.length);
-};
-=======
 for (let chat of CHAT_DATA) {
   const html =
     `
@@ -85,4 +70,3 @@ const openChat = (id) => {
   }
 
 }
->>>>>>> cc52f2ffa2f196f15fda7d7c623795d146735bdf
