@@ -1,4 +1,5 @@
 
+/*
 function firstThread() {
   document.getElementById("lefSide").style.visibility = "hidden";
   document.getElementById("inScreen").style.visibility = "hidden";
@@ -54,3 +55,19 @@ function sixThread() {
             document.getElementById("threadFifth").style.visibility = "hidden";
             document.getElementById("threadSix").style.visibility = "visible";
             };
+*/
+
+
+const colors = ["green","red","rgba(133,122,200)","#f15025"];
+const btn = document.getElementById("btn");
+const color = document.querySelector(".colors");
+
+btn.addEventListener("click", function () {
+  const randomNumber = getRandomNumber();
+  console.log(randomNumber);
+
+  document.body.style.backgroundColor = colors[randomNumber];
+});
+function getRandomNumber(){
+  return Math.floor(Math.random()* colors.length);
+};
