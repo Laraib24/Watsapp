@@ -6,7 +6,6 @@
     <title>WatsApp</title>
     <script src="https://kit.fontawesome.com/e4af567682.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="js/main.js"></script>
    
 </head>
 <body>
@@ -29,73 +28,8 @@
         <input type="search" placeholder= "Search or start new chat" id="Search-text-input">
     </div> 
     </div>
-    <div class="threads"> 
-            <div class="thread1"> 
-            <button onclick="firstThread()">
-        <div class="thread-img1">
-            <img src="images/blankprofile.png" alt="">
-        </div>
-        <div class="title1"> <h3>Laraib</h3>
-           <p>a</p>
-
-        </div>
-            </button>
-            </div>       
-            <div class="thread2"> 
-            <button onclick="secondThread()">
-            <div class="thread-img1">
-                <img src="images/blankprofile.png" alt="">
-            </div>
-            <div class="title1"> <h3>Zawar</h3>
-               <p>a</p>
-    
-            </div>
-            </button>
-            </div>
-            <div class="thread3"> 
-            <button onclick="thirdThread()">
-                <div class="thread-img1">
-                    <img src="images/blankprofile.png" alt="">
-                </div>
-                <div class="title1"> <h3>Tuba</h3>
-                   <p>a</p>
-        
-                </div>
-            </button>
-            </div>
-            <div class="thread4"> 
-            <button onclick="fourThread()">
-                    <div class="thread-img1">
-                        <img src="images/blankprofile.png" alt="">
-                    </div>
-                    <div class="title1"> <h3>Zaira</h3>
-                       <p>a</p>
-            
-                    </div>
-            </button>
-            </div>
-            <div class="thread5"> 
-            <button onclick="fifthThread()">
-                        <div class="thread-img1">
-                            <img src="images/blankprofile.png" alt="">
-                        </div>
-                        <div class="title1"> <h3>Aqsa</h3>
-                           <p>a</p>
-                
-                        </div>
-            </button>
-            </div>
-            <div class="thread6"> 
-            <button onclick="sixThread()">
-                            <div class="thread-img1">
-                                <img src="images/blankprofile.png" alt="">
-                            </div>
-                            <div class="title1"> <h3>Nimra</h3>
-                               <p>k</p>
-                    
-                            </div>
-            </button>
-            </div>
+    <div class="threads" id="threads"> 
+           
     </div>
     </div>
 <div class="left-side" id="lefSide">
@@ -122,12 +56,11 @@
         <div class="thread-img1">
             <img src="images/blankprofile.png" alt="">
         </div>
-        <div class="title1"> <h3>Laraib</h3>
-           <p>a</p>
-
-        </div>
+        <div class="title1" id="chat_title"></div>
         </button>
-        </div> 
+
+
+    </div> 
         <div class="left-menu">
             <ul>
                 <a href="#"> <li> <i class="fas fa-circle-notch"></i></li> </a>
@@ -136,10 +69,12 @@
              </ul>
         </div>
   </div>
-  <div class="Chat1">
 
-
+  <div class="msg_history" id="chat_history">
+    
   </div>
+
+
   <div class="Type-message">
       <i class="far fa-laugh"></i> 
       <input type="text" placeholder="Type a message">
@@ -305,9 +240,10 @@
         <input type="text" placeholder="Type a message">
         <i class="fas fa-microphone"></i>
     </div>
-</div>
+</div> 
 </div>
      
-    
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
